@@ -1,0 +1,79 @@
+.containerbx{
+    background-color: #ced4da;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    justify-content: center;
+} 
+.login-form{
+    margin-top: 40px;
+}
+h2{
+    text-align: center;
+}
+.input-container{
+    background-color: #fff;
+    height: 250px;
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction:column;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+.input-container h3{
+    font-size: 16px;
+    opacity: 0.7;
+}
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 4px;
+  }
+  .icon {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #555;
+    
+  }
+  input[type="email"],
+  input[type="password"] {
+    flex: 1;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    outline: none;
+  }
+  .sign{
+    display: flex;
+    justify-content: space-between;
+  }
+  footer{
+    margin-top: 20px;
+    background-color: #367fa9;
+    padding: 10px;
+    margin: 10px;
+  }
+  footer p{
+    color: #fff;
+  }
+  /* media */
+  @media (max-width: 768px) {
+    .input-container {
+        width: 80%;
+    } 
+  }
+  @media (max-width: 576px) {
+    .input-container {
+        width: 100%;
+    }
+}

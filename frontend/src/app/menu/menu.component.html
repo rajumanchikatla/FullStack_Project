@@ -1,0 +1,32 @@
+<div class="menu-container">
+    <h2>Menu</h2>
+<div class="main">
+  
+    <div class="heading">
+      <ul class="menu">
+        <li (click)="toggleMenu('single')">Single Menu</li>&nbsp;
+        <li (click)="toggleMenu('sub')">Submenu</li>
+      </ul>
+    </div>
+      
+      <div *ngIf="showSingleMenu" class="submenu active">
+        <ul>
+          <li>Testing</li>
+          <li>Java</li>
+          <li>.Net</li>
+          <li>Database</li>
+        </ul>
+      </div>
+      
+      <div *ngIf="showSubMenu" class="submenu">
+        <ul>
+          <li>Testing</li>
+          <li>Java</li>
+          <li>.Net</li>
+          <li>Data Base</li>
+        </ul>
+      </div>
+      
+</div>
+
+</div>

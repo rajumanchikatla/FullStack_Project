@@ -1,0 +1,12 @@
+<div class="main-container">
+    <h2>Slider</h2>
+    <div class="content">
+        <button>Slider</button>
+        <div class="slider">
+            <input type="range" min="0" max="100" [(ngModel)]="sliderValue" (input)="updatesliderValue()">
+
+            <p>Current Slide Value:{{sliderValue}}</p>
+        </div>
+    </div>
+    
+</div>

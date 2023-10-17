@@ -1,0 +1,64 @@
+<router-outlet></router-outlet>
+<div class="container" >
+    <div>
+        <h2>Employee <span>Search</span></h2>
+       
+        </div>
+        <div class="message" *ngIf="successMessage || errorMessage">
+            <div class="Msg" style="font-size: 14px;" *ngIf="successMessage">{{successMessage}}</div>
+            <div class="Msg" *ngIf="errorMessage">{{errorMessage}}</div>
+        </div>
+       <div class="searchemployee">
+        <h2> Search Employee</h2>
+        <div class="seachscreen">
+        <div class="inputs">
+            <label for="firstName">Name:</label>
+            <input type="text" [(ngModel)]="name" id="name" placeholder="Enter first or last name" >
+           </div>
+           <!-- <div class="inputs">
+            <label for="mobilenumber">Mobile number:</label>
+            <input type="tel" [(ngModel)]="mobileNumber" id="mobileNumber" placeholder="Enter Number">
+            </div> -->
+            <div class="btns">
+                <button mat-button (click)="refreshSearch()" style="color: #fff;">Search</button>
+                <button type="reset" mat-button style="color:  #fff;">Cancel</button>
+                <button mat-button style="color: #fff;" (click)="gotocreate()">Add Employee</button>
+            </div>
+       </div>
+       <div class="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                    <th>Email</th>
+                    <th>MobileNumber</th>
+                    <th>Gender</th>
+                    <th>Dob</th>
+                    <th>country</th>
+                    <th>city</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of employees">
+                    <td>{{employee.firstName}}</td>
+                    <td>{{employee.lastName}}</td>
+                    <td>{{employee.email}}</td>
+                    <td>{{employee.mobileNumber}}</td>
+                    <td>{{employee.gender}}</td>
+                    <td>{{employee.dob}}</td>
+                    <td>{{employee.country}}</td>
+                    <td>{{employee.city}}</td>
+                    <td span="2">
+                        <button mat-button style="color: #fff;" (click)="update(employee)" routerLink="update">update</button>
+                        <button mat-button style="color: #fff; background-color: #ff8787;" (click)="deleteEmployee(employee.mobileNumber)">Delete</button>
+                 </td>
+                </tr>
+            </tbody>
+        </table>
+       </div>
+       </div>
+        </div>
+
+ 

@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<section>
+    <div class="main-container" >
+        <!-- *ngIf="!authService.isAuthenticated" -->
+        <div class="heading">
+            <h1><b>JALA ACADEMY</b></h1>   
+        </div>
+        <div class="credentials">
+            <h2>Login credentials</h2>
+            <h5 class="credentials-size">Email:jalaacademy@gmail.com</h5>
+            <h5 class="credentials-size">Password:jobprogram</h5>
+            <div class="yellow">
+                <p>Learn Everything on Real-Time Scenarios</p>
+            </div>
+        </div>
+        <div class="login-container">
+               <div class="login-form">
+                <h2>Login</h2>
+                <h4 *ngIf = 'invalidlogin' style="color: red;">{{errormessage}}</h4>
+                <div class="input-container">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" [(ngModel)]="Email" placeholder="Enter your Email" required>
+                </div>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" [(ngModel)]="password" placeholder="Enter your Password" required>
+                 </div>
+                <div class="login-remember">
+                    <label class="remember-me">
+                        <input type="checkbox"> Remember Me
+                    </label>
+                    <button (click)="login()">Login</button>
+                </div>
+               </div>
+                <a routerLink="forgot"  class="forgot-password">Forgot Password..?</a>
+                <a routerLink="admin" class="Admin">Admin Login</a>
+        </div>
+    </div>
+</section>
+<div class="footer-section">
+    <div class="footer">
+        <p>JALA Academy offers Job Guaranteed Programs for Freshers to 12 year's experience on Full Stack Development / Automation Testing / Dev-Ops / QA/ SDET/Cyber Security / RPA / Cloud Technologies. Training would be completely on live Project scenarios Read our website 
+            JALA Academy for more details : <a href="https://jalaacademy.com/">https://jalaacademy.com/</a></p>
+    </div>
+</div>

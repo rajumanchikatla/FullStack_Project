@@ -1,0 +1,144 @@
+<mat-toolbar style="background: #367fa9;" class="mat-elevation-z8">
+    <button mat-icon-button (click)="nav.toggle()"><mat-icon style="color: #fff;">menu</mat-icon></button>
+    <span class="logo">Magnus</span>
+    <div class="extra"></div>
+    <mat-icon style="color: #fff;cursor: pointer;">logout</mat-icon>
+    <span class="span" (click)="logout()">Logout</span>
+  </mat-toolbar>
+  <mat-sidenav-container class="sidenav-wrapper">
+    <mat-sidenav opened mode="side" #nav>
+        <div class="guest-user">
+            <button mat-button class="user">
+                <mat-icon>person</mat-icon>
+                <span>Guest User</span>
+            </button>
+        </div>&nbsp;
+        <a routerLink="home" routerLinkActive="active" [routerLinkActiveOptions] = "{ exact:true }">
+            <button mat-button class="sidenav-btn">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+        </a>
+        <div class="sidenav-space"></div>
+        <button mat-button (click)="toggleEmployeeMenu()" class="sidenav-btn">
+            <mat-icon>badge</mat-icon>
+            <span>Employee</span>
+            <mat-icon *ngIf="employeeMenuOpen">expand_less</mat-icon>
+            <mat-icon *ngIf="!employeeMenuOpen">expand_more</mat-icon>
+        </button> 
+        <div class="submenu" *ngIf="employeeMenuOpen">
+            <a routerLink="create" >
+                <button mat-button  class="sidenav-btn">
+                    <mat-icon>add</mat-icon>
+                    <span>Create</span>
+                </button>
+            </a>
+            <a routerLink="search">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>search</mat-icon>
+                    <span>Search</span>
+                </button>
+            </a>
+        </div>
+        <div class="sidenav-space"></div>
+        <button mat-button (click)="toggleMoreMenu()"  class="sidenav-btn">
+            <mat-icon>more</mat-icon>
+            <span>More</span>
+            <mat-icon *ngIf="MoreMenuOpen">expand_less</mat-icon>
+            <mat-icon *ngIf="!MoreMenuOpen">expand_more</mat-icon>
+        </button> 
+        <div class="submenu" *ngIf="MoreMenuOpen ">
+            <a routerLink="tabs">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>tab</mat-icon>
+                    <span>Multiple Tabs</span>
+                </button>
+            </a>
+        
+            <a routerLink="menu">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>menu</mat-icon>
+                    <span>Menu</span>
+                </button>
+            </a>
+        
+            <a routerLink="autocomplete">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>search</mat-icon>
+                    <span>AutoComplete</span>
+                </button>
+            </a>
+        
+            <a routerLink="collapsible-content">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>unfold_less</mat-icon>
+                    <span>Collape text</span>
+                </button>
+            </a>
+        
+            <a routerLink="images">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>image</mat-icon>
+                    <span>Images</span>
+                </button>
+            </a>
+        
+            <a routerLink="slider">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>settings_input_component</mat-icon>
+                    <span>Slider</span>
+                </button>
+            </a>
+        
+            <a routerLink="tooltips">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>lightbulb_outline</mat-icon>
+                    <span>Tooltips</span>
+                </button>
+            </a>
+        
+            <a routerLink="popups">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>message</mat-icon>
+                    <span>Popups</span>
+                </button>
+            </a>
+        
+            <a routerLink="links">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>link</mat-icon>
+                    <span>Links</span>
+                </button>
+            </a>
+        
+            <a routerLink="css-properties">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>style</mat-icon>
+                    <span>CSS Properties</span>
+                </button>
+            </a>
+        
+            <a routerLink="iframes">
+                <button mat-button class="sidenav-btn">
+                    <mat-icon>web</mat-icon>
+                    <span>iFrames</span>
+                </button>
+            </a>
+        </div>
+        <div class="sidenav-space"></div>
+        <a>
+            <button mat-button class="sidenav-btn">
+                <mat-icon>settings</mat-icon>
+                <span>Settings</span>
+            </button>
+        </a>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+        <footer class="footer">
+                <p>All Rights Reserved at rajumanchikatla90@gmail.com</p>
+        </footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
