@@ -1,0 +1,29 @@
+<div class="main-container">
+    <h2>Autocomplete</h2>
+    <div class="content">
+      <div class="auto">
+        <ul>
+          <button style="color: #fff;"
+            mat-button
+            class="autocomplete-button"
+            (click)="showSingleValues()"
+            [class.active]="singleValuesActive"
+          >
+            Single Values
+          </button>
+          <button
+            mat-button style="color: #fff;"
+            class="autocomplete-button"
+            (click)="showMultipleValues()"
+            [class.active]="multipleValuesActive"
+          >
+            Multiple Values
+          </button>
+        </ul>
+      </div>
+      <div class="content-text">
+        tags:<input type="text">
+      </div>
+    </div>
+  </div>
+  

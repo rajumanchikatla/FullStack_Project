@@ -1,0 +1,136 @@
+section{
+    background-color: #ced4da;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 62.5%;
+}
+.main-container{
+    padding: 2rem;
+    max-width:750px;
+    min-height:100vh;
+    width:90%;
+    margin:0 auto;
+    text-align: center;
+    box-sizing:border-box;
+}
+.credentials-size{
+     font-size: 0.8rem;
+}
+.credentials{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+.yellow{
+    background-color: yellow;
+    margin: 5px auto;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+.yellow p{
+    display: block;
+    padding: 0px 3rem;
+    margin: 0 auto;
+}
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 1rem auto;
+    width: inherit;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.login-form {
+    text-align: center;
+}
+.login-form h2 {
+    margin-bottom: 5px;
+}
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.input-container i {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #555;
+}
+.input-container input {
+    width: 100%;
+    padding: 10px 30px 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.login-remember{
+    display: flex;
+    justify-content: space-between;
+}
+.remember-me input {
+    margin-right: 5px;
+}
+button {
+    background-color: #367fa9;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+.forgot-password {
+    display: block;
+    background-color:#364fc7;
+    font-size: 1rem;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 10px;
+    margin: 15px;
+}
+.forgot-password:hover{
+    background-color: navy;
+}
+.Admin{
+    font-size: 1rem;
+    text-decoration: none;
+}
+.footer-section{
+    display: inline-block;
+    background-color: #ced4da;
+}
+.footer{
+    background-color: #367fa9;
+     margin: 15px;
+}
+.footer p {
+    color: #fff;
+    padding: 10px;
+    font-size: 0.8rem;
+}
+.footer a{
+    color: #fff;
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-container {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,107 @@
+<div class="main-container">
+    <h2>Collapsible Content</h2>
+    <div class="main-content">
+        <div class="btn">
+            <button (click)="setCollapseMode('single')">Single Collapse</button>
+            <button (click)="setCollapseMode('multiple')">Multiple Collapse</button>
+        </div>
+        <div class="container">
+          <mdb-accordion [flush]="true" *ngIf="collapseMode === ('single')">
+            <mdb-accordion-item >
+              <div class="head blue-header"><ng-template mdbAccordionItemHeader class="blue-header">Know Your goals and prioritize wisely</ng-template></div>
+              <ng-template mdbAccordionItemBody class="custom-font">
+                What are your priorities for the day? Make a list of your priorities and plan your day. The tasks of the day must be outlined with the most important and urgent ones on top.
+                Likewise, determine your short-term and long-term goals and evaluate your progress frequently.
+              </ng-template>
+            </mdb-accordion-item>
+            <mdb-accordion-item>
+              <div class="head blue-header"><ng-template mdbAccordionItemHeader>Be focused and Eliminate Distractions</ng-template> </div>
+              <ng-template mdbAccordionItemBody>
+                Are you really present physically and mentally. Try to block out all distractions so that you have
+              </ng-template>
+            </mdb-accordion-item>
+            <mdb-accordion-item>
+              <div class="head blue-header"><ng-template mdbAccordionItemHeader>Choose the right mentor to success in career</ng-template></div>
+              <ng-template mdbAccordionItemBody>
+                There is a big difference between a mentor and a coach<br>
+                Mentoring is a long-term process based on mutual trust and respect. Coaching, on the other hand, is for a short period of time.<br>      
+                The topmost priority of a mentor is to help develop skills that are not just relevant for the mentees in their present job, but also for the future. A mentor has the first-hand experience in the industry
+              </ng-template>
+            </mdb-accordion-item>
+          </mdb-accordion>
+          <mdb-accordion [multiple]="true" *ngIf="collapseMode === ('multiple')">
+            <mdb-accordion-item >
+              <ng-template mdbAccordionItemHeader>Collabarate with colleges</ng-template>
+              <ng-template mdbAccordionItemBody>
+                <ul>
+                  <li>Teach and learn from each other</li>
+                  <li>Collaborate on lesson plans-Two minds are better than one.</li>      
+                  <li>Build your own social network</li>                    
+                   <li> Get feedback regularly</li>
+                    <li>Work together to solve problems</li>
+                    <li> Become a teacher-leader</li>                 
+                    <li>Adopt a team mentality</li>
+                    <li>Ask for help</li>
+                    <li>Find a mentor</li>   
+                   <li>Be open to new ideas</li>
+                </ul>
+              </ng-template>
+            </mdb-accordion-item>
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Learn Anything quickly</ng-template>
+              <ng-template mdbAccordionItemBody>
+               <ul>
+               <li> Learn by doing. Always play with the code while learning1.</li>
+                <li>Ask for help. You’ll need it</li>
+                <li>TEACH SOMEONE ELSE</li>
+                <li>FOCUS ON THE 20%</li>
+                <li>Identifying the problem that needs solving</li>
+                <li>Seek out more online resources. There’s a wealth of content</li>
+                <li>Don’t just read the sample code. Tinker with it!</li>
+                <li> Take breaks when debugging</li>
+                <li>Keep Calm and Keep On Coding</li>
+               </ul>
+              </ng-template>
+            </mdb-accordion-item>
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Rason to people give up on their goals early</ng-template>
+              <ng-template mdbAccordionItemBody>
+               <ul>
+               <li> They want the outcome more than they want to obtain a skill</li>
+                <li>They do not have the discipline to stick with their idea long enough to see it live</li>
+                <li>They get distracted by what someone else is doing</li>
+                <li>They don't believe in themselves enough.</li>
+                <li>They fail once--and never try again</li>
+                <li>They don't learn how to discipline themselves</li>
+                <li>They care more about the end result, not the process</li>
+                <li>They surround themselves with people who are a negative influence.</li>
+                <li>They would rather settle for short-term rewards</li>
+                <li>They don't have a guaranteed path to achieve success</li>
+                <li>They don’t have the discipline to work hard enough</li>
+                <li>They don't know that failure is normal</li>
+               </ul>
+              </ng-template>
+            </mdb-accordion-item>
+            <mdb-accordion-item>
+              <ng-template mdbAccordionItemHeader>Signs of Setting for less in life</ng-template>
+              <ng-template mdbAccordionItemBody>
+               <ul>
+               <li> your always tired </li>
+                <li>you keep saying after</li>
+                <li>You don't think you can</li>
+                <li> You think a lot but do little</li>
+                <li>Your palying small and you think it's ok</li>
+                <li>WhatsApp, Facebook, and TV are the highlight of your day</li>
+                <li>You are not ready to break comfort</li>
+                <li> You rely on escapism</li>
+                <li>You have the exact same friends</li>
+                <li>You have no idea what you want</li>
+                <li>You don't think you deserve better</li>
+               </ul>
+              </ng-template>
+            </mdb-accordion-item>
+          </mdb-accordion>
+        </div>
+            </div>
+        </div>
+ 

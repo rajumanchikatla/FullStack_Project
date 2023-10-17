@@ -1,0 +1,78 @@
+.extra{
+    flex: 1 1 auto;
+}
+.logo{
+    margin: 20px;
+    color: #fff;
+}
+.span{
+    color: #fff;
+    cursor: pointer;
+} 
+.sidenav-wrapper{
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background:#fff;
+  }
+mat-sidenav{
+    width: 230px;
+    padding: 20px;
+    background-color: #1e1e1e; 
+    color: #fff;
+  }
+mat-sidenav span,
+.sidenav-btn span,
+.submenu a span {
+    color: #fff;
+}
+mat-sidenav mat-icon,
+.sidenav-btn mat-icon,
+.submenu a mat-icon {
+    color: #fff;
+}
+button span{
+    margin: 10px; 
+  }
+.submenu a span{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+  }
+.sidenav-btn{
+    margin-bottom: 10px;
+}
+.sidenav-space{
+    margin-bottom:20px;
+}
+.content {
+  min-height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  margin: 20px; 
+}
+.footer {
+  color: #222;
+  background-color: #fff;
+}
+
+
+
+
+
+  
+
+
+
+
+
+
+
+

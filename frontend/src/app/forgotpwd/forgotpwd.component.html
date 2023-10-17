@@ -1,0 +1,19 @@
+<div class="containerbx">
+    <div class="forgot-box">
+     <div class="head">Magnus</div>
+        <div class="emailbox">
+           <div><h4>Forgot Password</h4></div>
+           <div class="message" style="color: green;" *ngIf="showMessage">
+            {{message}}
+           </div>
+            <div class="emailbx">
+                <input type="email" placeholder="Email" [(ngModel)]="email" required>
+            </div>
+            <div class="back">
+                <h3><a routerLink="/">Back</a></h3>
+                <button mat-button style="color: #fff;" (click)="getPassword()">Get Password</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  

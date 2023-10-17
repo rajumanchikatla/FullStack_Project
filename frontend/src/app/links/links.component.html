@@ -1,0 +1,48 @@
+<div class="main-container">
+    <h2>Links</h2>
+    <div class="menu">
+        <div class="buttons">
+            <button class="btn" (click)="showWorkingLinks()">Working Links</button>
+            <button  class="btn"(click)="showBrokenLinks()">Broken Links</button>
+            <button  class="btn" (click)="showImageLinks()">Image Links</button>
+            <button  class="btn" (click)="showStatusCodes()">Status codes</button>
+            <div class="line"></div>
+            <div class="content">
+                <div *ngIf="activeContent === 'workingLinks'">
+                    <ul class="workingLinks">
+                        <li ><a href="https://www.workinglinks.co.uk/" class="text-danger">Link 1</a> </li>
+                        <li><a href="https://www.workinglinks.co.uk/"  class="text-primary">Link 2</a></li>
+                        <li><a href="https://www.workinglinks.co.uk/"  class="text-success">Link 3</a></li>
+                    </ul>
+                </div>
+                <div *ngIf="activeContent === 'brokenLinks'"> 
+                    <ul class="workingLinks">
+                        <li ><a href="https://magnus.jalatechnologies.com/Home/www.brokenlinkcheck.com/" class="text-danger">Link 1</a> </li>
+                        <li><a href="https://magnus.jalatechnologies.com/Home/www.brokenlinkcheck.com/"  class="text-primary">Link 2</a></li>
+                        <li><a href="https://magnus.jalatechnologies.com/Home/www.brokenlinkcheck.com/"  class="text-success">Link3</a></li>
+                        </ul>
+                    </div>
+             
+                <div *ngIf="activeContent === 'imageLinks'">
+                    <ul class="imglinks">
+                        <li><a href="https://www.google.com/" target="_blank"><img src="assets/google-logo.jpg"></a></li>
+                        <li><a href="https://www.google.com/" target="_blank"><img src="assets/growic-technologies.jpg"></a></li>
+                        <li><a href="https://www.google.com/" target="_blank"><img src="assets/jala-tech-logo.png"></a></li>
+                        <li><a href="https://www.linkedin.com/" target="_blank"><img src="assets/linkedin.png"></a></li>
+                    </ul>
+                </div>
+                <div *ngIf="activeContent === 'statusCodes'"> 
+                    <ul class="workingLinks">
+                        <li ><a href="https://www.restapitutorial.com/httpstatuscodes.html" class="text-danger">404</a> </li>
+                        <li ><a href="https://www.restapitutorial.com/httpstatuscodes.html" class="text-danger">500</a> </li>
+                        <li><a href="https://www.restapitutorial.com/httpstatuscodes.html"  class="text-primary">301</a></li>
+                        <li><a href="https://www.restapitutorial.com/httpstatuscodes.html"  class="text-success">200</a></li>
+                    </ul>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

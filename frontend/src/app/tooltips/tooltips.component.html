@@ -1,0 +1,15 @@
+<div class="main-container">
+    <h2>Tool tips</h2>
+    <div class="menu">
+        <button>Tooltip</button>
+        <div class="tool">
+                   <div class="btn">
+                <button
+                (mouseenter)="activateMessage()"
+                (click)="activateMessage()"
+                (mouseleave)="deactivateMessage()">Check The tooltip Before You click</button>
+                <p *ngIf="isActivated">Thanks for being here</p>
+            </div>
+        </div>
+    </div>
+</div>

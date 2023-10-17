@@ -1,0 +1,16 @@
+<div class="main-container">
+    <h2>Download/Upload image</h2>
+    <div class="images">
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" id="fileInput" style="display: none" />
+      <button (click)="chooseFile()" class="choose-file-button">Choose File</button>
+      <input type="text" [(ngModel)]="selectedFile" placeholder="Selected File" disabled />
+      <button (click)="uploadImage()" class="upload-button" [disabled]="!selectedFile">Upload</button>
+      <h3>List of uploaded images:</h3>
+      <ul>
+        <li *ngFor="let image of uploadedImages">
+            <img src="image.url" alt="img" width="100" height="100"> 
+            {{ image.name  }}</li>
+      </ul>
+    </div>
+  </div>
+  
